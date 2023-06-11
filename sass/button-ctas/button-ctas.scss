@@ -1,0 +1,484 @@
+/**
+ * Button ctas.
+ */
+
+// General styles.
+.button-ctas {
+  .field-items {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .field-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+  }
+}
+
+// Centered buttons.
+.button-ctas--center {
+  .field-items {
+    justify-content: center;
+  }
+}
+
+// Default button style.
+.button-cta-link.btn {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 12px 30px;
+  border: 1px solid $gray-lighter;
+  border-radius: 0;
+  outline: none;
+  background-color: #fafafa;
+  font-size: 18px;
+  line-height: 1.15em;
+  text-align: center;
+  justify-content: center;
+  color: $gray;
+  transition: 
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border 0.15s ease-in-out;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px 5px;
+    font-size: 16px;
+  }
+
+  > .content {
+    display: flex;
+    align-items: center;
+  }
+
+  // Icon.
+  i {
+    display: inline-block;
+    font-size: 1em;
+    color: $orange;
+    transition: color 0.15s ease-in-out;
+
+    &.fa--icon-before {
+      padding-right: 8px;
+    }
+    &.fa--icon-after {
+      padding-left: 8px;
+    }
+  }
+
+  .button-cta-link__title__text {
+    display: inline-block;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: #fff;
+    line-height: 1.15em;
+    outline: none;
+    box-shadow: none;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+// Button w/o border.
+.button-cta-link.btn--default--no-border {
+  padding: 12px 5px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: $orange;
+  font-weight: 500;
+
+  &:hover,
+  &:focus  {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: $link-hover-color;
+
+    i {
+      color: $link-hover-color;
+    }
+  }
+}
+
+// Primary button.
+.button-cta-link.btn--primary {
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: #fff;
+
+  i {
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $link-hover-color;
+    border: 1px solid $link-hover-color;
+  }
+}
+
+// Primary button (alternate).
+.button-cta-link.btn--primary--alt {
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: #fff;
+
+  .button-cta-link__title--icon-before {
+    padding-left: 47px;
+  }
+
+  .button-cta-link__title--icon-after {
+    padding-right: 47px;
+  }
+
+  i.fa--icon-before,
+  i.fa--icon-after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    width: 47px;
+    padding: 0;
+    background-color: $gray-dark;
+    color: #fff;
+
+    &:before {
+      display: block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  i.fa--icon-before {
+    left: -1px;
+  }
+
+  i.fa--icon-after {
+    right: -1px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $link-hover-color;
+    border: 1px solid $link-hover-color;
+  }
+}
+
+// Primary button.
+.button-cta-link.btn--primary {
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: #fff;
+
+  i {
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $link-hover-color;
+    border: 1px solid $link-hover-color;
+  }
+}
+
+// Blue button.
+.button-cta-link.btn--blue {
+  border: 1px solid $blue;
+  background-color: $blue;
+  color: #fff;
+
+  i {
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color:  darken($blue, 15%);
+    border: 1px solid  darken($blue, 15%);
+  }
+}
+
+// Green button.
+.button-cta-link.btn--green {
+  border: 1px solid $green;
+  background-color: $green;
+  color: #fff;
+
+  i {
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color:  darken($green, 15%);
+    border: 1px solid  darken($green, 15%);
+  }
+}
+
+// Alternate button common properties
+.button-cta-link.btn--primary--alt,
+.button-cta-link.btn--blue--alt,
+.button-cta-link.btn--green--alt {
+  .button-cta-link__title--icon-before {
+    padding-left: 47px;
+  }
+
+  .button-cta-link__title--icon-after {
+    padding-right: 47px;
+  }
+
+  i.fa--icon-before,
+  i.fa--icon-after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    width: 47px;
+    padding: 0;
+    background-color: $gray-dark;
+    color: #fff;
+
+    &:before {
+      display: block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  i.fa--icon-before {
+    left: -1px;
+  }
+
+  i.fa--icon-after {
+    right: -1px;
+  }
+}
+
+// Alternate button - primary specific.
+.button-cta-link.btn--primary--alt {
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: $link-hover-color;
+    border: 1px solid $link-hover-color;
+  }
+}
+
+// Alternate button - blue specific.
+.button-cta-link.btn--blue--alt {
+  border: 1px solid $blue;
+  background-color: $blue;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: darken($blue, 15%);
+    border: 1px solid darken($blue, 15%);
+  }
+}
+
+// Alternate button - green specific.
+.button-cta-link.btn--green--alt {
+  border: 1px solid $green;
+  background-color: $green;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: darken($green, 15%);
+    border: 1px solid darken($green, 15%);
+  }
+}
+
+// Large button.
+.button-cta-link.btn--large {
+  @media (min-width: $screen-sm) {
+    padding: 15px 30px;
+    font-size: 22px;
+  }
+}
+
+
+/**
+ * Default button theme style overrides for DARK backgrounds.
+ */
+
+.page-section.page-section--dark-theme {
+
+  // Default.
+  .button-cta-link.btn {
+    background-color: rgba($gray-dark, .75);
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #fff;
+      border: 1px solid #fff;
+      color: $gray-dark;
+
+      i {
+        color: $orange;
+      }
+    }
+  }
+
+  // Default w/o borders.
+  .button-cta-link.btn--default--no-border {
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-weight: 400;
+
+    // Icon.
+    i {
+      color: $orange;
+    }
+
+    &:hover,
+    &:focus  {
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: $orange;
+    }
+  }
+
+  // Primary button.
+  .button-cta-link.btn--primary {
+    background-color: $orange;
+
+    i {
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $link-hover-color;
+      border: 1px solid $link-hover-color;
+      color: #fff;
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+
+  // Blue button.
+  .button-cta-link.btn--blue {
+    background-color: $blue;
+
+    i {
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 15%);
+      border: 1px solid darken($blue, 15%);
+      color: #fff;
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+
+  // Green button.
+  .button-cta-link.btn--green {
+    background-color: $green;
+
+    i {
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken($green, 15%);
+      border: 1px solid darken($green, 15%);
+      color: #fff;
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+
+  // Primary button (alternate).
+  .button-cta-link.btn--primary--alt {
+    background-color: $orange;
+
+    i.fa--icon-before,
+    i.fa--icon-after {
+      background-color: #000;
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $link-hover-color;
+      border: 1px solid $link-hover-color;
+      color: #fff;
+    }
+  }
+
+  // Blue button (alternate).
+  .button-cta-link.btn--blue--alt {
+    background-color: $blue;
+
+    i.fa--icon-before,
+    i.fa--icon-after {
+      background-color: #000;
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 15%);
+      border: 1px solid darken($blue, 15%);
+      color: #fff;
+    }
+  }
+
+  // Green button (alternate).
+  .button-cta-link.btn--green--alt {
+    background-color: $green;
+
+    i.fa--icon-before,
+    i.fa--icon-after {
+      background-color: #000;
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken($green, 15%);
+      border: 1px solid darken($green, 15%);
+      color: #fff;
+    }
+  }
+}
