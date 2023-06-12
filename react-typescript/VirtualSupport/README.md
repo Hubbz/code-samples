@@ -1,4 +1,4 @@
-# VirtualSupport - React Typescript
+# VirtualSupport - Typescript
 
 The `VirtualSupport` component is a small component that acts like an accordion. It was designed to have a button that, when clicked, opens up a series of `InfoButton` links.
 

@@ -150,7 +150,7 @@
         var formElement = $('form[data-form-id="' + formHubSpotID + '"]');
         var formCookieReset = $('.ideal-architecture-analysis').find('a[href="#reset-cookie"]');
         var formInputValuesObj = {};
-        var formCookieValues = Cookies.get('acromedia_arch_analysis_values');
+        var formCookieValues = Cookies.get('arch_analysis_values');
 
         // For returning users, show cookie message and pre-populate form with values stored in cookie.
         if (formCookieValues !== undefined) {
@@ -163,7 +163,7 @@
               event.preventDefault();
 
               // Reset cookie.
-              Cookies.remove('acromedia_arch_analysis_values');
+              Cookies.remove('arch_analysis_values');
 
               // Clear radio values and enable any disabled radios.
               formElement.find('input[type=radio]:checked').prop("checked", false);
@@ -210,7 +210,7 @@
           });
 
           // Set cookie with formRadioValuesObj object values.
-          Cookies.set('acromedia_arch_analysis_values', formInputValuesObj, { expires: 30 });
+          Cookies.set('arch_analysis_values', formInputValuesObj, { expires: 30 });
         });
       }
     });
